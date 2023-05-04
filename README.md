@@ -77,30 +77,35 @@ We will now set up the frontend using React. We will use create-react-app to cre
 
 6. Update the `App.js` file to include the following routes:
 
-   ```jsx
-   import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-   import Home from "./pages/Home";
-   import Products from "./pages/Products";
-   import CartPage from "./pages/Cart";
-   import CheckoutPage from "./pages/Checkout";
+```jsx
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-   function App() {
-     return (
-       <Router>
-         <div className="App">
-           <Switch>
-             <Route exact path="/" component={Home} />
-             <Route exact path="/products" component={Products} />
-             <Route exact path="/cart" component={CartPage} />
-             <Route exact path="/checkout" component={CheckoutPage} />
-           </Switch>
-         </div>
-       </Router>
-     );
-   }
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<span>Home</span>
+  },
+  {
+    path:"/products/:id",
+    element:<span>Category</span>
+  },
+  {
+    path:"/product/:id",
+    element:<span>Product</span>
+  },
+])
 
-   export default App;
-   ```
+function App() {
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
+}
+
+export default App;
+
+```
 
 7. Your React frontend is now set up. Start the development server by running the following command:
 
