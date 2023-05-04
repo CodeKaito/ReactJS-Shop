@@ -77,7 +77,7 @@ We will now set up the frontend using React. We will use create-react-app to cre
 
 6. Update the `App.js` file to include the following routes:
 
-   ```jsx
+```jsx
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -104,6 +104,7 @@ function App() {
 }
 
 export default App;
+
 ```
 
 7. Your React frontend is now set up. Start the development server by running the following command:
