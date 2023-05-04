@@ -104,7 +104,7 @@ function App() {
 }
 
 export default App;
-   ```
+```
 
 7. Your React frontend is now set up. Start the development server by running the following command:
 
