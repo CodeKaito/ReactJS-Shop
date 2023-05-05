@@ -38,14 +38,14 @@ const Product = () => {
         <button className='add'>
           <AddShoppingCartIcon /> ADD TO CART
         </button>
-        <div className="link">
+        <div className="links">
           <div className="item">
-            <FavoriteBorderIcon /> ADD TO WISH LIST
+            <FavoriteBorderIcon className='icon' /> ADD TO WISH LIST
           </div>
-          <div className="item"></div>
-            <BalanceIcon /> ADD TO COMPARE
+          <div className="item">
+            <BalanceIcon className='icon' /> ADD TO COMPARE
+          </div>
         </div>
-      </div>
       <div className="info">
         <span>Vendor: Polo</span>
           <span>Product Type: T-Shirt</span>
@@ -60,6 +60,7 @@ const Product = () => {
         <span>FAQ</span>
       </div>
     </div>
+  </div>
   )
 }
 
