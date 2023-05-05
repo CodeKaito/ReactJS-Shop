@@ -1,9 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Card.scss'
 
-const Card = () => {
+const Card = ({item}) => {
   return (
-    <div>Card</div>
+    <Link className="link" to={`/product/${item.id}`}>
+        <div className="card">
+            <div className="image">
+                {item.isNew && <span>New season</span>}
+                <img src={item.img} alt="" className="mainImg" />
+                <img src={item.img2} alt="" className="secondImg" />
+            </div>
+            <h2>{item.title}</h2>
+            <div className="prices">
+                <h3>${item.oldPrice}</h3>
+                <h2>${item.price}</h2>
+            </div>
+        </div>
+    </Link>
   )
 }
 
