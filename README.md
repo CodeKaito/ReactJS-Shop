@@ -123,4 +123,4 @@ We will now integrate Stripe to allow customers to make payments.
 
 2. In the Stripe dashboard, navigate to the API keys section and copy the publishable key.
 
-3. Add the following code to your
+3. Add the following code to your.
